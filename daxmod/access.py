@@ -67,7 +67,7 @@ def load_from_folder(dataset_folder:str, sub: str = 'train',
     else:
         folder_path = os.path.join(dataset_folder, sub)
         if not os.path.isdir(folder_path):
-            raise NotDirectoryError
+            raise NotDirectoryError(folder_path)
     folder_list = os.listdir(folder_path)
     classes = len(folder_list)
     classes_info = {}
@@ -75,7 +75,7 @@ def load_from_folder(dataset_folder:str, sub: str = 'train',
         for class_ in folder_list:
             classes_info[class_] = os.path.join(folder_path, class_)
     else:
-        raise NumberOfClassesError
+        raise NumberOfClassesError(classes)
     data_frame = pd.DataFrame(columns=['text','label'])
     for key, folder in classes_info.items():
         list_ = os.listdir(folder)
@@ -83,7 +83,7 @@ def load_from_folder(dataset_folder:str, sub: str = 'train',
             output = Parallel(n_jobs=n_jobs)(delayed(_loader)(folder, file, encoding) for file in list_)
             data_frame = data_frame.append(pd.DataFrame({'text':output,'label':key}))
         else:
-            raise NoFilesError
+            raise NoFilesError(folder)
     return data_frame.sample(frac=1).reset_index(drop=True)
 
         

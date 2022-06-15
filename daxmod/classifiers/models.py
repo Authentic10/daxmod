@@ -94,7 +94,7 @@ class Models(BaseEstimator, ClassifierMixin):
             float: Return the score selected
         """
         if metric not in METRICS:
-            raise MetricError
+            raise MetricError(metric)
         check_is_fitted(self)
         score_ = METRICS.get(metric)
         return score_(y_true=y, y_pred=self.predict(X), sample_weight=sample_weight)

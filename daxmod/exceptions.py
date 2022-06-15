@@ -56,13 +56,12 @@ class StringVariableError(Exception):
 
 class TrainFolderNotFoundError(Exception):
     """Train folder not found error"""
-    def __init__(self, folder, message="The folder must have a subfolder named train") -> None:
-        self.folder = folder
+    def __init__(self, message="The folder must have a subfolder named train") -> None:
         self.message = message
         super().__init__(self.message)
 
     def __str__(self):
-        return f'{self.folder} -> {self.message}'
+        return f'{self.message}'
 
 class NotDirectoryError(Exception):
     """Not a directory error"""
@@ -96,11 +95,11 @@ class NoFilesError(Exception):
 
 class MetricError(Exception):
     """Metric not found error"""
-    def __init__(self, folder, message="The selected score is not available. Try 'accuracy' or 'balanced_accuracy',\
+    def __init__(self, metric, message="The selected score is not available. Try 'accuracy' or 'balanced_accuracy',\
                              or 'f1' or 'precision' or 'recall' instead") -> None:
-        self.folder = folder
+        self.metric = metric
         self.message = message
         super().__init__(self.message)
 
     def __str__(self):
-        return f'{self.folder} -> {self.message}'
+        return f'{self.metric} -> {self.message}'

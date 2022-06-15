@@ -8,7 +8,7 @@ daxmod is a Python module for text classification
 
 daxmod requires:
 
-- Python (>=3.9)
+- Python (>=3.8)
 
 - joblib (>=1.1.0)
 
@@ -17,6 +17,8 @@ daxmod requires:
 - pandas (>=1.3.4)
 
 - scikit-learn (>=1.0.1)
+
+optional requirements for pretrained models:
 
 - tensorflow (>=2.7.0)
 

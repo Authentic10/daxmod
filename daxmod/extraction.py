@@ -31,9 +31,9 @@ def _get_extractor(extractor):
         if extractor in DEFINED_EXTRACTORS:
             extractor_ = DEFINED_EXTRACTORS.get(extractor)
         else:
-            raise ExtractorNotFoundError
+            raise ExtractorNotFoundError(extractor)
     else:
-        raise StringVariableError
+        raise StringVariableError(extractor)
     return extractor_
 
 class Extractors(BaseEstimator, TransformerMixin):

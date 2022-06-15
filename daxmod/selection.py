@@ -18,9 +18,9 @@ def _get_function(function):
         if function in DEFINED_SELECT_K_FUNCTIONS:
             function_ = DEFINED_SELECT_K_FUNCTIONS.get(function)
         else:
-            raise SelectionFunctionError
+            raise SelectionFunctionError(function)
     else:
-        raise StringVariableError
+        raise StringVariableError(function)
     return function_
 
 class SelectTopK(SelectKBest):
