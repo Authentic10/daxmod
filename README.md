@@ -18,7 +18,7 @@ daxmod requires:
 
 - scikit-learn (>=1.0.1)
 
-optional requirements for pretrained models:
+dependencies for pretrained models:
 
 - tensorflow (>=2.7.0)
 
@@ -28,8 +28,16 @@ optional requirements for pretrained models:
 
 ### User installation
 
+#### Installation without pretrained dependencies
+
 ```bash
 pip install -U daxmod
+```
+
+#### Installation with pretrained dependencies
+
+```bash
+pip install -U daxmod[pretrained]
 ```
 
 ### Source code
