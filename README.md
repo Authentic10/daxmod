@@ -22,7 +22,7 @@ Daxmod can load two types of datasests: data in raw format and in tabular format
 
 #### Load data in raw format
 
-Parmaeters:
+Parmeters:
 
 - **dataset_folder**: the path of the dataset folder
 - **sub**: the subset to load. Set to `train` by default
