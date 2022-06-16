@@ -4,7 +4,7 @@ Daxmod is a **python toolbox** designed for, but not limited to, the simplificat
 
 Daxmod includes modules for data loading, feature extraction, feature selection, model building and evaluation, and object persistence.
 
-![daxmod_package](https://www.dropbox.com/s/hj0ivfwvc7adbtp/daxmod_package.svg?raw=1)
+![daxmod_package](https://www.dropbox.com/s/hj0ivfwvc7adbtp/daxmod_package.svg?dl=0)
 
 ___
 
@@ -12,7 +12,7 @@ ___
 
 Daxmod supports two main workflows: the **building workflow** and the **pretrained workflow**.
 
-![daxmod_structure](https://www.dropbox.com/s/henti87ihccmvgt/daxmod_workflow.svg?raw=1)
+![daxmod_structure](https://www.dropbox.com/s/henti87ihccmvgt/daxmod_workflow.svg?dl=0)
 
 The **building workflow** performs text classification through several steps while the **pretrained workflow** use pre-trained models.
 
