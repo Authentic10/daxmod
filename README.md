@@ -4,7 +4,7 @@ Daxmod is a **python toolbox** designed for, but not limited to, the simplificat
 
 Daxmod includes modules for data loading, feature extraction, feature selection, model building and evaluation, and object persistence.
 
-Paper : [Daxmod: A toolbox for text classification](/daxmod.fr)
+Paper : [Daxmod: A toolbox for text classification](https://github.com/Authentic10/daxmod/blob/main/daxmod.pdf)
 
 ![daxmod_package](https://user-images.githubusercontent.com/45699578/174140781-92de933c-0d1a-48c7-8853-9cec77fac81d.svg)
 
